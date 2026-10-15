@@ -1,0 +1,24 @@
+[
+  {
+    "type": "normal",
+    "fileName": "profile-fox-dark.svg",
+    "backgroundColor": "#14100D",
+    "foregroundColor": "#FFF4E6",
+    "strongColor": "#F59A4A",
+    "weakColor": "#9C7A62",
+    "radarColor": "#E8671C",
+    "growingAnimation": true,
+    "contribColors": ["#2A1D15", "#6B2A0B", "#B4440F", "#E8671C", "#FFB877"]
+  },
+  {
+    "type": "normal",
+    "fileName": "profile-fox-light.svg",
+    "backgroundColor": "#FFF8F0",
+    "foregroundColor": "#3A2418",
+    "strongColor": "#B4440F",
+    "weakColor": "#9C7A62",
+    "radarColor": "#E8671C",
+    "growingAnimation": true,
+    "contribColors": ["#F6E3CF", "#F7BE8A", "#F59A4A", "#E8671C", "#B4440F"]
+  }
+]

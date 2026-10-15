@@ -1,0 +1,27 @@
+name: Contribution snake (fox palette)
+
+on:
+  schedule:
+    - cron: "30 3 * * *" # tous les jours, 03:30 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg?color_snake=#E8671C&color_dots=#F6E3CF,#F7BE8A,#F59A4A,#E8671C,#B4440F
+            dist/github-snake-dark.svg?color_snake=#FFF4E6&color_dots=#2A1D15,#6B2A0B,#B4440F,#E8671C,#FFB877
+
+      - uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
